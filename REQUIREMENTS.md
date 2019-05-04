@@ -50,7 +50,7 @@ _**DEPED:**_ none
 _**NAME:**_ F-REQ-02  
 _**PRIORITY:**_ high  
 _**TITLE:**_ Different triggers for staring a backup  
-_**DESCR:**_ Different action can start a backup task like a file chnages inside a folder or a certain time has expired.  
+_**DESCR:**_ Different action can start a backup task like a file changes inside a folder or a certain time has expired.  
 _**DEPED:**_ none 
 
 #### 3.2.3 Functional Requirement 3
@@ -79,7 +79,7 @@ _**DEPED:**_ none
 #### 3.2.2 Non-Functional Requirement 2
 _**NAME:**_ Q-REQ-02  
 _**TITLE:**_ Application should not be dependent on any geographical areas  
-_**DESCR:**_ When copying the files to a desired location they will be compressed in some way.  
+_**DESCR:**_ The application should be able to let the user choose from multiple languages.  
 _**DEPED:**_ none  
 
 [1]: https://standards.ieee.org/standard/830-1998.html
