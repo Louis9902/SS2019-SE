@@ -2,10 +2,10 @@
 
 ## 1. Introduction
 ### 1.1 Purpose
-The purpose of this document is to present a detailed description of the functional and nonfunctional requirements for the "Backupper" software. It will explain the purpose and features of the software, the interfaces of the software, what the software will do and the constraints under which it must operate. This document is intended for users of the software and also a reference for developing the first version of the software.
+The purpose of this document is to give a detailed description of the functional and nonfunctional requirements for the application “Backupper”. It will illustrate the purpose and the complete explanation for the development of the system. The document will also explain system limitations and interfaces, this is primarily intended to be proposed to a customer for its approval and a reference for developing the first version of the system.
 
 ### 1.2 Scope
-The "Backupper" software is an application which helps people to create 
+The “Backupper” software is an application software which helps people to create easily backups of their data. The application should be free to download and fully customizable for the user. Users can create their own backup tasks via a graphical user interface or directly by editing a configuration file. The created tasks can be started by different events, which are predefined by the software. One of these triggers should be able to observe a file change and store the changes until a threshold is reached. After this the files should be copied to a desired location. To guarantee that no file changes are missed during the reboot of the computer, these changes must be persistent and wrote to disk of the have not reached the threshold. The application must also be independent of any geographical areas as well as independent of the operating system.
 
 ### 1.3 Definitions, acronyms, and abbreviations
 | Term  | Definition                                 |
@@ -19,11 +19,13 @@ The "Backupper" software is an application which helps people to create
 Practice for Software Requirements Specifications”, October 20, 1998][1]
 
 ### 1.5 Overview
+The following parapraphs of this document provide an overview of the system functionality. This chapter also introduces the stakeholder and his interaction with the system.  Further, the chapter also mentions the system constraints and assumptions about the product.
 
 ## 2 Overall description
 ### 2.1 Product perspective
 ### 2.2 Product functions
 ### 2.3 User characteristics
+> ~~Stakeholders~~
 ### 2.4 Constraints
 
 ## 3. Specific requirements
