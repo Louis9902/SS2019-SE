@@ -1,0 +1,30 @@
+@startuml
+
+:User: as User
+:OS: as OS
+
+usecase Startup as "1. Startup
+---------
+OS or User starts the application
+--
+1.1 Start application
+1.2 Start userinterface
+"
+
+(2. Edit jobs) as edit
+
+(3. Hide GUI) as close
+(4. Stop application) as stop
+
+User -> Startup
+OS -> Startup
+
+OS -> stop
+User -> stop
+
+
+User "1" --> "0..n" edit
+
+User --> close
+
+@enduml
