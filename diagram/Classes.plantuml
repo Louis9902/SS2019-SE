@@ -1,5 +1,7 @@
-@startuml Model Classes
-page 1x2
+@startuml Classes
+top to bottom direction
+
+!define file String {File, Directory}
 
 package app.common {
     class Entrypoint {
@@ -13,7 +15,7 @@ package app.common {
 
     class WorkerManager {
         -variety: Directory<Long, Type>
-        -storage: String {file}
+        -storage: String {File}
         -workers: Directory<Guid, Worker>
 
         +WorkerManager(variety: Directory<Long, Type>, storage: String)
@@ -34,8 +36,8 @@ package app.common {
     }
 
     class BackupWorker extends Worker {
-        -source: String {File, Directory}
-        -target: String {File, Directory}
+        -source: file
+        -target: file
         -observer: FileObserver
 
         +BackupWorker(identifier: Guid, manager: WorkerManager, source: String, target: String)
@@ -46,9 +48,9 @@ package app.common {
 
     class FileObserver {
         +<<get>> Changes: List<String>
-        -target: String {File, Directory}
+        -target: file
 
-        +FileObserver(file: string)
+        +FileObserver(file: String)
     }
 }
 
@@ -62,6 +64,6 @@ Entrypoint "1" -- "1" WorkerManager : starts with varieties and data input >
 WorkerManager "1" -- "n" Worker : manages >
 BackupWorker "1" -- "1" FileObserver : keeps track of files >
 
-WorkerManager --0)-- UserInterface : storage
+WorkerManager ---0)-- UserInterface : storage
 
 @enduml
