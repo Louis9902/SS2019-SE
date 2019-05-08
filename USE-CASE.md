@@ -49,3 +49,15 @@ _INPUT INFO:_ Storage file
 _PRECONDITIONS:_ none  
 _POSTCONDITIONS:_ none  
 _STEPS:_ 1. User or Os starts the application  
+
+### 1.3 Exit graphical user interface
+_TYPE:_ UI exit  
+_DESCRIPTION:_ User closes the graphical user interface and the changes will be either saved or not   
+_TRIGGER:_ User clicks a button 
+_RESULT:_ The graphical user interface is closed and the changes either saved or not  
+_ACTORS:_ User  
+_INPUT INFO:_ If the user either wants to save the changes or not  
+_PRECONDITIONS:_ The graphical user interface must be shown already  
+_POSTCONDITIONS:_ none  
+_STEPS:_ 1. User clicks a button  
+         2. The graphical user interface closes  
