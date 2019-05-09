@@ -18,19 +18,35 @@ namespace GUI
         }
 
 
-        static string ConfigFilePath = "";
+        static string ConfigFilePath = "config.txt";
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          
+            StreamReader sr = new StreamReader(ConfigFilePath);
+            while (!sr.EndOfStream)
+            {
+                string line = sr.ReadLine();
+                string[] elements = line.Split('|');
 
-            MessageBox.Show("Load config here");
+                dataGridView.Rows.Add(new object[] { elements[1], elements[2] });
+            }
+            sr.Close();
         }
 
         private void Button_OK_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Do stuff here");
+            StreamWriter sw = new StreamWriter(ConfigFilePath);
+            for (int i = 0; i < dataGridView.Rows.Count - 1; i++)
+            {
+                DataGridViewRow row = dataGridView.Rows[i];
+                sw.Write("1|");
+                sw.Write(row.Cells[0].Value);
+                sw.Write("|");
+                sw.WriteLine(row.Cells[1].Value);
+            }
+
+            sw.Close();
             this.Close();
         }
 
