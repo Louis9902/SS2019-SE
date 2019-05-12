@@ -42,7 +42,7 @@ _STEPS:_ 1. User opens the UI
 ### 1.2 Manage configuration
 _TYPE:_ User modifies avaiable Jobs  
 _DESCRIPTION:_ User can change, add or delete jobs  
-_TRIGGER:_ PC starts or user restarts the app
+_TRIGGER:_ PC starts or user restarts the app  
 _RESULT:_ The application has started  
 _ACTORS:_ User or Os  
 _INPUT INFO:_ Storage file  
@@ -53,7 +53,7 @@ _STEPS:_ 1. User or Os starts the application
 ### 1.3 Exit graphical user interface
 _TYPE:_ UI exit  
 _DESCRIPTION:_ User closes the graphical user interface and the changes will be either saved or not   
-_TRIGGER:_ User clicks a button 
+_TRIGGER:_ User clicks a button  
 _RESULT:_ The graphical user interface is closed and the changes either saved or not  
 _ACTORS:_ User  
 _INPUT INFO:_ If the user either wants to save the changes or not  
