@@ -76,5 +76,10 @@ namespace GUI
             this.Close();
         }
 
+        private void dataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DialogResult result = folderBrowserDialog1.ShowDialog();
+            dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = folderBrowserDialog1.SelectedPath;
+        }
     }
 }
