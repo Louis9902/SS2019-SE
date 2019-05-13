@@ -28,10 +28,20 @@ namespace GUI
             {
                 File.Create(ConfigFilePath).Close();
             }
+            StreamReader sr;
 
-
-
-            StreamReader sr = new StreamReader(ConfigFilePath);
+            try
+            {
+                sr = new StreamReader(ConfigFilePath);
+            }
+            catch (System.IO.IOException)
+            {
+                MessageBox.Show("The program is currently copying the files. Please retry in a few moments.");
+                Application.Exit();
+                return;
+                
+            }
+           
             while (!sr.EndOfStream)
             {
                 string line = sr.ReadLine();
