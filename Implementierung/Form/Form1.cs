@@ -21,8 +21,16 @@ namespace GUI
         static string ConfigFilePath = "config.txt";
 
 
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (!File.Exists(ConfigFilePath))
+            {
+                File.Create(ConfigFilePath).Close();
+            }
+
+
+
             StreamReader sr = new StreamReader(ConfigFilePath);
             while (!sr.EndOfStream)
             {
@@ -36,6 +44,9 @@ namespace GUI
 
         private void Button_OK_Click(object sender, EventArgs e)
         {
+            if (!File.Exists(ConfigFilePath))
+                File.Create(ConfigFilePath);
+
             StreamWriter sw = new StreamWriter(ConfigFilePath);
             for (int i = 0; i < dataGridView.Rows.Count - 1; i++)
             {
